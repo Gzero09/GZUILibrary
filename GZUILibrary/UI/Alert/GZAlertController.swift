@@ -55,9 +55,9 @@ public class GZAlertController: UIViewController {
                                                       y: ImageView.frame.height+ImageView.frame.origin.y+5.0,
                                                       width: View.frame.width,
                                                       height: 30.0))
-        MainTitle.textColor = GZ_COLORS.LIGHT_GREY_COLOR
+        MainTitle.textColor = GZ_COLORS.PRIMARY_LABEL_COLOR
         MainTitle.text = Title
-        MainTitle.font = GZ_FONTS.ALERT_MAIN_HEAD_FONT
+        MainTitle.font = GZ_FONTS.GetFontWith(Type: .BOLD, Size: 15.0)
         MainTitle.textAlignment = .center
         View.addSubview(MainTitle)
         
@@ -68,7 +68,7 @@ public class GZAlertController: UIViewController {
         
         MessageTitle.textColor = GZ_COLORS.SECONDARY_LABEL_COLOR
         MessageTitle.text = Message
-        MessageTitle.font = GZ_FONTS.MESSAGE_TEXT_FONT
+        MessageTitle.font = GZ_FONTS.GetFontWith(Type: .MEDIUM, Size: 15.0)
         MessageTitle.lineBreakMode = .byWordWrapping
         MessageTitle.numberOfLines = 0
         MessageTitle.textAlignment = .center
