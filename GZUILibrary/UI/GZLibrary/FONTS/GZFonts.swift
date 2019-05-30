@@ -11,13 +11,29 @@ public class GZ_FONTS{
     
     
     //MARK: FONTS
-    static let HELVETICA_MEDIUM = UIFont(name: "HelveticaNeue-Medium", size: CGFloat(18))
-    static let HELVETICA_LIGHT = UIFont(name: "HelveticaNeue-Light", size: CGFloat(18))
-    static let HELVETICA_REGULAR = UIFont(name: "HelveticaNeue-Regular", size: CGFloat(18))
-    static let HELVETICA_LARGE = UIFont(name: "HelveticaNeue-Medium", size: CGFloat(25))
+    public static let HELVETICA_MEDIUM = UIFont(name: "HelveticaNeue-Medium", size: CGFloat(18))!
+    public static let HELVETICA_LIGHT = UIFont(name: "HelveticaNeue-Light", size: CGFloat(18))!
+    public static let HELVETICA_REGULAR = UIFont(name: "HelveticaNeue", size: CGFloat(18))!
+    public static let HELVETICA_BOLD = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(18))!
     
-    static let MESSAGE_TEXT_FONT = UIFont(name: "HelveticaNeue-Medium", size: CGFloat(15))
-    static let ALERT_MAIN_HEAD_FONT = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(15))
-    
-    static let TABBAR_TITLE_FONT = UIFont(name: "HelveticaNeue-Medium", size: CGFloat(14))
+    public class func GetFontWith(Type:FontType, Size:CGFloat) -> UIFont{
+        let returnFont:UIFont!
+        switch Type {
+        case .BOLD:
+            returnFont = UIFont(name: "HelveticaNeue-Bold", size: Size)
+        case .LIGHT:
+            returnFont = UIFont(name: "HelveticaNeue-Light", size: Size)
+        case .MEDIUM:
+            returnFont = UIFont(name: "HelveticaNeue-Medium", size: Size)
+        default:
+            returnFont = UIFont(name: "HelveticaNeue", size: Size)
+        }
+        return returnFont
+    }
+}
+public enum FontType {
+    case BOLD
+    case LIGHT
+    case MEDIUM
+    case REGULAR
 }
