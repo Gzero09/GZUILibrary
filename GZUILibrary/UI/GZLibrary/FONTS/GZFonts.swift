@@ -11,11 +11,15 @@ public class GZ_FONTS{
     
     
     //MARK: FONTS
+
     public static let HELVETICA_MEDIUM = UIFont(name: "HelveticaNeue-Medium", size: CGFloat(18))!
     public static let HELVETICA_LIGHT = UIFont(name: "HelveticaNeue-Light", size: CGFloat(18))!
     public static let HELVETICA_REGULAR = UIFont(name: "HelveticaNeue", size: CGFloat(18))!
     public static let HELVETICA_BOLD = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(18))!
     
+/*
+     Get Helvetica Font With Type and Size
+     **/
     public class func GetFontWith(Type:FontType, Size:CGFloat) -> UIFont{
         let returnFont:UIFont!
         switch Type {
@@ -31,6 +35,7 @@ public class GZ_FONTS{
         return returnFont
     }
 }
+
 public enum FontType {
     case BOLD
     case LIGHT
