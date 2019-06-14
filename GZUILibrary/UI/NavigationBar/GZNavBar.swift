@@ -25,6 +25,7 @@ public class GZNavBar: UIView {
         Heading.textColor = TextColor
     }
     
+    
     public func AddLeftButton(with Icon:UIImage, selector:Selector) {
         let LeftButton:UIButton = UIButton(frame: CGRect(x: 5.0, y: 10.0, width: 30.0, height: self.frame.height))
         LeftButton.addTarget(GetParentController(), action: selector, for: .touchUpInside)

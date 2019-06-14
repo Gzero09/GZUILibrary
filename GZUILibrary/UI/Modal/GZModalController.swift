@@ -16,9 +16,9 @@ public class GZModalController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
     }
-    /*
+/**
      Instantiate Controller With Background Color
-     **/
+     */
     public init(BackgroundColor:UIColor) {
         super.init(nibName: nil, bundle: nil)
         View.frame = CGRect(x: 3.0, y: MainScreen.height/3, width: MainScreen.width-6, height: MainScreen.height*3/4)
@@ -38,12 +38,14 @@ public class GZModalController: UIViewController {
         View.layer.shadowOffset = CGSize(width: -1, height: -2)
         View.layer.shadowRadius = 7
     }
-    /*
+/**
      Present Alert On View
-     **/
+     */
     public func RunModal(){
-        self.modalPresentationStyle = .overCurrentContext
-        UIApplication.shared.keyWindow?.rootViewController?.present(self, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.modalPresentationStyle = .overCurrentContext
+            UIApplication.shared.keyWindow?.rootViewController?.present(self, animated: true, completion: nil)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

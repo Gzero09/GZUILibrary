@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         // Create Navigation Bar With Title, Background Color and Text Color.
         let NavigationBar = GZNavBar(Title: "Navigation",
-                                     TextColor: GZ_COLORS.PRIMARY_COLOR,
+                                     TextColor: GZ_COLORS.PRIMARY_LABEL_COLOR,
                                      BackgroundColor: .white)
         NavigationBar.AddLeftButton(with: UIImage(named: "BackButton_Image")!,
                                     selector: #selector(BackButtonClicked))
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
          */
         self.view.addSubview(NavigationBar)
         
-        let FloatingButton = GZFloatButton(BackGroundColor: GZ_COLORS.PRIMARY_COLOR,
+        let FloatingButton = GZFloatButton(BackGroundColor: GZ_COLORS.SECONDARY_COLOR,
                                            Icon: UIImage(named: "ImageName")!)
         FloatingButton.addTarget(self, action: #selector(FloatingButtonClicked),
                                  for: .touchUpInside)
@@ -58,7 +58,6 @@ class ViewController: UIViewController {
     }
     func FloatingButtonClicked() {
         print("Floating Button Clicked")
-        
         let alert = GZAlertController(Title: "Alert", Message: "This is Alert Message",
                                       icon: UIImage(named: "AlertIcon")!)
         //To Insert Button with Title

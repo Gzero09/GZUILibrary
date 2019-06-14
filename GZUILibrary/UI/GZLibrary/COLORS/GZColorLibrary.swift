@@ -19,9 +19,9 @@ public class GZ_COLORS{
     public static let PRIMARY_LABEL_COLOR = UIColor(red: 18.0/255.0, green: 18.0/255.0, blue: 18.0/255.0, alpha: 1.0)
     public static let SECONDARY_LABEL_COLOR = UIColor(red: 81.0/255.0, green: 81.0/255.0, blue: 81.0/255.0, alpha: 1.0)
     
-/*
+/**
      Set Gradient Color To View With Colors & Direction
-     **/
+     */
     public class func SetGradientColorToView(view:UIView, Colors:[UIColor],Direction:GRADIENT_DIRECTION){
         let gradientLayer = CAGradientLayer()
         var cgArray:[CGColor] = [CGColor]()
@@ -54,12 +54,14 @@ public class GZ_COLORS{
         gradientLayer.frame = view.bounds
         view.backgroundColor = .none
         view.layer.insertSublayer(gradientLayer, at: 0)
+        
     }
 
-/*
+/**
      Get HEX Color From Hex String Ex. #ffffff
-     **/
-    public func HEX_COLOR(HEX:String) -> UIColor {
+     */
+    public class func HEX_COLOR(HEX:String) -> UIColor {
+        
         var cString:String = HEX.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
