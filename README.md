@@ -103,7 +103,7 @@ FloatingButton.addTarget(self, action: #selector(FloatingButtonClicked),
 //To add Button To View
 self.view.addSubview(FloatingButton)
 ```
-##### GZ_COLORS/GZ_FONTS
+##### GZ_COLORS
 GZ_COLORS Provides Multiple Colors Access to User.
 With Default it provides:
 - [x] Primary Color
@@ -113,8 +113,17 @@ With Default it provides:
 - [x] Dark Color
 - [x] Primary Label Color
 - [x] Secondary Label Color
-- [x] Hex Color From String
-- [x] SetGradientColorToView (This Function provides ease to apply gradient to view with directions and Colors Array.)
+- [x] (Method) Hex Color From String
+- [x] (Method) SetGradientColorToView (This Function provides ease to apply gradient to view with directions and Colors Array.)
+
+##### GZ_FONTS
+GZ_FONTS Provides Acces to Multiple Stock Fonts.
+With Default it provides:
+- [x] Helvetica Neue Regular
+- [x] Helvetica Neue Light
+- [x] Helvetica Neue Medium
+- [x] Helvetica Neue Bold
+- [x] (Method) Use GetFontsWith() to Get UIFont with font style (i.e. Light, medium, regular,bold) with font size
 
 
 ### Installing
