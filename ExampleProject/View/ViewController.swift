@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     }
 
     func SetupViews() {
-        
         // Create Navigation Bar With Title, Background Color and Text Color.
         let NavigationBar = GZNavBar(Title: "Navigation",
                                      TextColor: GZ_COLORS.PRIMARY_LABEL_COLOR,
@@ -46,6 +45,14 @@ class ViewController: UIViewController {
         ModalButton.setTitleColor(.black, for: .normal)
         ModalButton.addTarget(self, action: #selector(OpenModal), for: .touchUpInside)
         self.view.addSubview(ModalButton)
+        
+        let TabBar = GZTabBar(BackgroundColor: .white,
+                              ShadowHeight: 1.0, ShadowRadius: 1.0, TintColor: .red)
+        TabBar.InsertButtonWith(Icon: UIImage(named: "Home")!, BackgroundColor: .white)
+        TabBar.InsertButtonWith(Icon: UIImage(named: "Settings")!, BackgroundColor: .white)
+        TabBar.delegate = self
+        self.view.addSubview(TabBar)
+        
         
     }
     
@@ -82,5 +89,10 @@ class ViewController: UIViewController {
 extension ViewController:GZAlertDelegate{
     func DidReceivedTouchWithButton(Title: String) {
         print("Button With Title: \(Title) Clicked")
+    }
+}
+extension ViewController:GZTabBarDelegate{
+    func DidReceivedButtonClickAt(Index: Int) {
+        print("Selected Button: \(Index)")
     }
 }

@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-public class GZFloatButton: UIButton {
+@objc public class GZFloatButton: UIButton {
     public init(BackGroundColor:UIColor,Icon:UIImage) {
         super.init(frame: CGRect())
         self.frame = CGRect(x: UIScreen.main.bounds.width-70.0,

@@ -8,20 +8,21 @@
 
 import UIKit
 
-public protocol GZTabBarDelegate{
+@objc public protocol GZTabBarDelegate{
     func DidReceivedButtonClickAt(Index:Int)
 }
 
+@objc public class GZTabBar: UIView {
+    
     private var ButtonArray:[UIButton] = [UIButton]()
     private var ButtonTintColor:UIColor! = nil
+    
     public var delegate:GZTabBarDelegate! = nil
-
-public class GZTabBar: UIView {
-
-/*
+    
+/**
      Instantiate TabBar Without Constraints
-     **/
-    init(BackgroundColor:UIColor,ShadowHeight:CGFloat,ShadowRadius:CGFloat,TintColor:UIColor) {
+     */
+    public init(BackgroundColor:UIColor,ShadowHeight:CGFloat,ShadowRadius:CGFloat,TintColor:UIColor) {
         super.init(frame: CGRect())
         self.frame = CGRect(x: 0.0, y: UIScreen.main.bounds.height-50.0, width: UIScreen.main.bounds.width, height: 50)
         self.backgroundColor = BackgroundColor
@@ -30,9 +31,9 @@ public class GZTabBar: UIView {
     }
 
 
-/*
+/**
      Insert A Button With Icon and Background Color of Button
-     **/
+     */
    public func InsertButtonWith(Icon:UIImage,BackgroundColor:UIColor) {
         let Button:UIButton = UIButton()
         Button.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.width/(CGFloat(ButtonArray.count)+1), height: 50.0)

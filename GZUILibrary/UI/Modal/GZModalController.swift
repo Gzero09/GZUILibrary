@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class GZModalController: UIViewController {
+@objc public class GZModalController: UIViewController {
     
     public let View:UIView = UIView()
     private let MainScreen = UIScreen.main.bounds

@@ -8,14 +8,14 @@
 
 import UIKit
 
-public protocol GZAlertDelegate{
-    /*
+@objc public protocol GZAlertDelegate{
+    /**
      Receive the Title Name Of Button Clicked
-     **/
+     */
     func DidReceivedTouchWithButton(Title:String)
 }
 
-public class GZAlertController: UIViewController {
+@objc public class GZAlertController: UIViewController {
 
     public var delegate:GZAlertDelegate! = nil
     
@@ -28,9 +28,9 @@ public class GZAlertController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
     }
-    /*
+/**
      Instantiate Controller With Title, Message and Icon For Alert
-     **/
+     */
     public init(Title:String,Message:String,icon:UIImage) {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.3)
@@ -85,9 +85,9 @@ public class GZAlertController: UIViewController {
                                  height: totalViewHeight+10.0)
     }
     
-    /*
+/**
      Add Button To Alert With Title
-     **/
+     */
     public func InsertButtonWith(Title:String)
     {
         let Button:UIButton = UIButton()
@@ -143,7 +143,6 @@ public class GZAlertController: UIViewController {
         ButtonArray.append(Button)
         self.View.addSubview(Button)
     }
-    
     
     public func RunModal(){
         self.modalTransitionStyle = .crossDissolve

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class GZNavBar: UIView {
+@objc public class GZNavBar: UIView {
 
     private let Heading:UILabel = UILabel()
     

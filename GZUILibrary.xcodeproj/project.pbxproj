@@ -13,8 +13,8 @@
 		94EBA877229E8E0A0077510E /* GZTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA86B229E8E0A0077510E /* GZTabBar.swift */; };
 		94EBA878229E8E0A0077510E /* GZNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA86D229E8E0A0077510E /* GZNavBar.swift */; };
 		94EBA879229E8E0A0077510E /* GZModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA86F229E8E0A0077510E /* GZModalController.swift */; };
-		94EBA87A229E8E0A0077510E /* GZColorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA872229E8E0A0077510E /* GZColorLibrary.swift */; };
-		94EBA87B229E8E0A0077510E /* GZFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA874229E8E0A0077510E /* GZFonts.swift */; };
+		94EBA87A229E8E0A0077510E /* GZ_COLORS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA872229E8E0A0077510E /* GZ_COLORS.swift */; };
+		94EBA87B229E8E0A0077510E /* GZ_FONTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA874229E8E0A0077510E /* GZ_FONTS.swift */; };
 		94EBA883229E8FC60077510E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA882229E8FC60077510E /* AppDelegate.swift */; };
 		94EBA885229E8FC60077510E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EBA884229E8FC60077510E /* ViewController.swift */; };
 		94EBA888229E8FC60077510E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EBA886229E8FC60077510E /* Main.storyboard */; };
@@ -31,8 +31,8 @@
 		94EBA86B229E8E0A0077510E /* GZTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GZTabBar.swift; sourceTree = "<group>"; };
 		94EBA86D229E8E0A0077510E /* GZNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GZNavBar.swift; sourceTree = "<group>"; };
 		94EBA86F229E8E0A0077510E /* GZModalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GZModalController.swift; sourceTree = "<group>"; };
-		94EBA872229E8E0A0077510E /* GZColorLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GZColorLibrary.swift; sourceTree = "<group>"; };
-		94EBA874229E8E0A0077510E /* GZFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GZFonts.swift; sourceTree = "<group>"; };
+		94EBA872229E8E0A0077510E /* GZ_COLORS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GZ_COLORS.swift; sourceTree = "<group>"; };
+		94EBA874229E8E0A0077510E /* GZ_FONTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GZ_FONTS.swift; sourceTree = "<group>"; };
 		94EBA880229E8FC60077510E /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EBA882229E8FC60077510E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EBA884229E8FC60077510E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		94EBA871229E8E0A0077510E /* COLORS */ = {
 			isa = PBXGroup;
 			children = (
-				94EBA872229E8E0A0077510E /* GZColorLibrary.swift */,
+				94EBA872229E8E0A0077510E /* GZ_COLORS.swift */,
 			);
 			path = COLORS;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 		94EBA873229E8E0A0077510E /* FONTS */ = {
 			isa = PBXGroup;
 			children = (
-				94EBA874229E8E0A0077510E /* GZFonts.swift */,
+				94EBA874229E8E0A0077510E /* GZ_FONTS.swift */,
 			);
 			path = FONTS;
 			sourceTree = "<group>";
@@ -317,10 +317,10 @@
 				94EBA876229E8E0A0077510E /* GZAlertController.swift in Sources */,
 				94EBA875229E8E0A0077510E /* GZFloatButton.swift in Sources */,
 				94EBA877229E8E0A0077510E /* GZTabBar.swift in Sources */,
-				94EBA87B229E8E0A0077510E /* GZFonts.swift in Sources */,
+				94EBA87B229E8E0A0077510E /* GZ_FONTS.swift in Sources */,
 				94EBA878229E8E0A0077510E /* GZNavBar.swift in Sources */,
 				94EBA879229E8E0A0077510E /* GZModalController.swift in Sources */,
-				94EBA87A229E8E0A0077510E /* GZColorLibrary.swift in Sources */,
+				94EBA87A229E8E0A0077510E /* GZ_COLORS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gzero.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -565,7 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gzero.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
