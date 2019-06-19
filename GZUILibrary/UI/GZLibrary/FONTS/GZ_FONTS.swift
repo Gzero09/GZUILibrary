@@ -7,7 +7,7 @@
 //
 
 import UIKit
-public class GZ_FONTS{
+@objc public class GZ_FONTS:NSObject{
     
     
     //MARK: FONTS
@@ -17,9 +17,9 @@ public class GZ_FONTS{
     public static let HELVETICA_REGULAR = UIFont(name: "HelveticaNeue", size: CGFloat(18))!
     public static let HELVETICA_BOLD = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(18))!
     
-/*
+/**
      Get Helvetica Font With Type and Size
-     **/
+     */
     public class func GetFontWith(Type:FontType, Size:CGFloat) -> UIFont{
         let returnFont:UIFont!
         switch Type {

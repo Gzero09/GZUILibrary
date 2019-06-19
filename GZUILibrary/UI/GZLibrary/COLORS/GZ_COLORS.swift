@@ -7,7 +7,7 @@
 //
 
 import UIKit
-public class GZ_COLORS{
+@objc public class GZ_COLORS:NSObject{
     
     //MARK: COLORS
     public static let PRIMARY_COLOR = UIColor(red: 72.0/255.0, green: 138.0/255.0, blue: 255.0/255.0, alpha: 1.0)
