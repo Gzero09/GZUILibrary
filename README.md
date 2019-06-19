@@ -145,6 +145,11 @@ target 'YourProjectName' do
     	pod 'GZUILibrary'
 end
 ```
+Close the Pod File and open Terminal and direct to project directory and enter the following command.
+```
+pod install
+```
+
 
 ## Contributors
 ### Mayur Mane :  https://github.com/Sudarshan7993
