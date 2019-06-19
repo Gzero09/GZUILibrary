@@ -1,4 +1,5 @@
 # GZUILibrary
+![Platform](https://img.shields.io/cocoapods/p/GZUILibrary.svg)
 
 A UI Library for starters
 
@@ -144,3 +145,7 @@ target 'YourProjectName' do
     	pod 'GZUILibrary'
 end
 ```
+
+## Contributors
+### Mayur Mane :  https://github.com/Sudarshan7993
+### Amol Gunjal : https://github.com/amolgunjalios2017
