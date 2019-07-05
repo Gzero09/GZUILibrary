@@ -9,7 +9,7 @@ Add Extended UI Elements like Navigation bar, Floating Button, Action modals, Al
 
 ### Prerequisites
 
-Xcode: 10.2+     Swfift: 4.2+
+Xcode: 10.2+     Swift: 4.2+
 
 #### How to Use?
 
